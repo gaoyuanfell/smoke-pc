@@ -8,6 +8,6 @@ msg=" | msg → $1"
 str="$date$user:$email$msg"
 commit="git commit -am '"$str"'"
 eval $commit
-git pull origin dev
-git push origin dev
+git pull origin master
+git push origin master
 echo "Success"
