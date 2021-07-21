@@ -1,0 +1,82 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// @font-face{
+
+//     　　font-family:'YaHeiConsolasHybrid';
+
+//     　　src:url('../fonts/yaheiconsolashybrid.ttf');
+
+//     　　}
+
+html {
+  //   font-family: Gilroy-regular, -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB,
+  //     Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: PingFang SC, DFPKingGothicGB-Medium, sans-serif, "Source Han Sans CN";
+}
+
+body {
+  user-select: none;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  font-family: "Source Han Sans CN";
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: #e5e5eabf;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #e5e5eabf;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blob {
+  font-weight: bold;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-spacing-0 {
+  letter-spacing: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 16px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}

@@ -1,34 +1,202 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Source Han Sans CN";
+        src: url("./src/assets/ttf/SourceHanSansCN-Normal.ttf");
+      }
+    </style>
   </head>
   <body class="body">
-
     <div class="header">
       <div class="logo"></div>
       <div class="menu">
-        <span>首页</span>
-        <span>产品介绍</span>
-        <span>门店展示</span>
-        <span>关于我们</span>
-        <span>招商加盟</span>
+        <span route-link="home" class="action"><a href="#home">首页</a></span>
+        <span route-link="product"><a href="#product">产品介绍</a></span>
+        <span route-link="store"><a href="#store">门店展示</a></span>
+        <span route-link="about"><a href="#about">关于我们</a></span>
+        <span route-link="join"><a href="#join">招商加盟</a></span>
       </div>
     </div>
-    <section class="home_swiper max">
-      <div class="swiper-item">
-        <!-- <img src="/src/assets/img/home_swiper_1.png"> -->
+    <div route-id="home">
+      <section class="home_swiper">
+        <div class="swiper-box" v-bind:style="{ transform: 'translateX(' + translateX + 'vw)' }">
+          <div class="swiper-item">
+            <div class="info">
+              <p>FLOCO乐氪 S10一次性雾化棒</p>
+              <p>乐享每一“氪”！</p>
+            </div>
+          </div>
+          <div class="swiper-item">
+            <div class="info">
+              <p>FLOCO乐氪 S10一次性雾化棒</p>
+              <p>乐享每一“氪”！</p>
+            </div>
+          </div>
+          <div class="swiper-item">
+            <div class="info">
+              <p>FLOCO乐氪 S10一次性雾化棒</p>
+              <p>乐享每一“氪”！</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow left" v-on:click="transformation(-1)"></div>
+        <div class="arrow right" v-on:click="transformation(1)"></div>
+        <div class="origin flex-center">
+          <span class="origin-item" v-on:click="setTransformation(0)" v-bind:class="{ active: number === 0 }"></span>
+          <span class="origin-item" v-on:click="setTransformation(1)" v-bind:class="{ active: number === 1 }"></span>
+          <span class="origin-item" v-on:click="setTransformation(2)" v-bind:class="{ active: number === 2 }"></span>
+        </div>
+      </section>
+      <section class="home_brand">
+        <div class="brand-content">
+          <div class="brand-img">
+            <img src="/src/assets/img/home_brand_1.png" />
+            <img src="/src/assets/img/home_brand_2.png" />
+          </div>
+          <div class="brand-info">
+            <p>FLOCO</p>
+            <p>BRAND STORY</p>
+            <p>品牌故事</p>
+            <p>
+              两年前，银橙科技进入电子烟行业并建立了电子烟品牌FLOCO乐氪，经过一年多的筹备，多次检测调试，终于为广大消费者打造出了S1、S5、S10<span
+                class="blob"
+                >三大系列</span
+              >的替烟产品。
+            </p>
+            <p>
+              我们始终坚信<span class="blob">灵感为个性而生</span
+              >，千篇一律终究平淡无趣，完美主义令人厌倦，每个存在的个体都是<span class="blob">独一无二</span
+              >，FLOCO乐氪因为科技让你<span class="blob">与众不同</span
+              >，只有被发现，被欣赏，被需要方能更显珍贵，让FLOCO开启你的灵感之旅，<span class="blob"
+                >一起乐享每"氪"！</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="home_product">
+        <div class="product-bg flex-center">
+          <p>产品介绍</p>
+          <p>ABOUT PRODUCT<span class="letter-spacing-0">S</span></p>
+        </div>
+        <div class="product-list flex-center">
+          <div class="product-list-item">
+            <img src="src/assets/img/home_product_2.png" />
+            <div class="item-info flex-center">
+              <p>FLOCO</p>
+              <p>S1换弹式雾化器</p>
+            </div>
+          </div>
+          <div class="product-list-item">
+            <img src="src/assets/img/home_product_3.png" />
+            <div class="item-info flex-center">
+              <p>FLOCO</p>
+              <p>S5换弹式雾化器</p>
+            </div>
+          </div>
+          <div class="product-list-item">
+            <img src="src/assets/img/home_product_4.png" />
+            <div class="item-info flex-center">
+              <p>FLOCO</p>
+              <p>S10一次性雾化棒</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home_patent flex-center">
+        <h1 class="patent-title">检测报告&专利认证</h1>
+
+        <div class="patent-info flex-center">
+          <ul>
+            <li>获欧盟电子雾化器CE专业检测认证</li>
+            <li>获美国联邦通信委员会FCC专业检测认证</li>
+            <li>整机符合TCT检测</li>
+            <li>烟油获得ROHS认证以及FDA认证</li>
+          </ul>
+          <ul>
+            <li>获欧盟电子雾化器CE专业检测认证</li>
+            <li>获美国联邦通信委员会FCC专业检测认证</li>
+            <li>整机符合TCT检测</li>
+            <li>烟油获得ROHS认证以及FDA认证</li>
+          </ul>
+        </div>
+
+        <div class="patent-list flex-center">
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_2.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_3.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_4.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_5.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_6.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_7.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_8.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_9.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_10.png" />
+          </div>
+          <div class="patent-list-item">
+            <img src="./src/assets/img/home_patent_11.png" />
+          </div>
+        </div>
+      </section>
+      <section class="home_warn">
+        <div class="warn-info">
+          <img src="./src/assets/img/home_footer_1.png" />
+        </div>
+        <img src="./src/assets/img/home_footer_2.png" />
+      </section>
+      <section class="home_footer flex-center">
+        <p>上海银橙科技股份有限公司</p>
+        <p>地址：上海市徐汇区钦州北路1199号87号楼6楼｜客服电话：400-086-3666</p>
+        <p>
+          Copyright © 2019, Shanghai YinCheng Technology Co., Ltd.All Rights Reserved. 京 ICP 备 19005651 号 - 1
+          京公网安备 11010502037227 号
+        </p>
+      </section>
+    </div>
+    <template route-id="product">
+      <div route-id="product">
+        <h1>产品介绍</h1>
       </div>
-      <div class="swiper-item">
-        <!-- <img src="/src/assets/img/home_swiper_1.png"> -->
+    </template>
+    <template route-id="store">
+      <div route-id="store">
+        <h1>门店展示</h1>
       </div>
-      <div class="swiper-item">
-        <!-- <img src="/src/assets/img/home_swiper_1.png"> -->
+    </template>
+    <template route-id="about">
+      <div route-id="about">
+        <h1>关于我们</h1>
       </div>
-    </section>
+    </template>
+    <template route-id="join">
+      <div route-id="join">
+        <h1>招商加盟</h1>
+      </div>
+    </template>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
