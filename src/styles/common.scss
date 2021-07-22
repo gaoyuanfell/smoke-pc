@@ -80,3 +80,25 @@ a {
   height: 6px;
   width: 6px;
 }
+
+.jing-gao {
+  .jing-gao-info {
+    padding-left: 10px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    &.black {
+      color: #000000;
+    }
+  }
+}
+
+.icon-jing-gao {
+  width: 34px;
+  height: 34px;
+  display: block;
+  background-image: url(../assets/img/jinggao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
