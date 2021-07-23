@@ -7,12 +7,9 @@ const home = new Vue({
       setIntervalNum: undefined
     };
   },
-  created() {
-    console.info("created");
-  },
+  created() {},
   methods: {
     transformation(num) {
-      console.info(num);
       switch (num) {
         case 1:
           ++this.number;
@@ -32,14 +29,13 @@ const home = new Vue({
       this.setIntervalTransformation();
     },
     setIntervalTransformation() {
-      this.setIntervalNum && clearInterval(this.setIntervalNum);
-      this.setIntervalNum = setInterval(() => {
-        this.transformation(1);
-      }, 5000);
+      // this.setIntervalNum && clearInterval(this.setIntervalNum);
+      // this.setIntervalNum = setInterval(() => {
+      //   this.transformation(1);
+      // }, 5000);
     }
   },
   ready() {
-    console.info("ready");
     this.setIntervalTransformation();
   }
 });

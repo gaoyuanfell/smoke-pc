@@ -1,6 +1,6 @@
 .product_list {
   .product-list-item {
-    height: 680px;
+    height: 100vh;
     position: relative;
     img {
       height: 100%;
@@ -31,8 +31,8 @@
     &:nth-child(1) {
       .item-info {
         position: absolute;
-        top: 155px;
-        right: 140px;
+        top: 211px;
+        right: 155px;
         h1 {
           margin: 0;
           margin-bottom: 20px;
@@ -43,6 +43,7 @@
           font-size: 50px;
           font-weight: 700;
           text-align: center;
+          font-family: "Source Han Sans CN - Heavy";
         }
       }
       .jing-gao {
@@ -67,6 +68,7 @@
           font-size: 50px;
           font-weight: 700;
           text-align: center;
+          font-family: "Source Han Sans CN - Heavy";
         }
       }
       .jing-gao {
@@ -83,8 +85,8 @@
       }
       .item-info {
         position: absolute;
-        top: 70px;
-        right: 106px;
+        top: 145px;
+        right: 127px;
         h6 {
           color: #ffe38d;
           font-size: 24px;
@@ -98,6 +100,7 @@
           font-size: 50px;
           font-weight: 700;
           text-align: right;
+          font-family: "Source Han Sans CN - Heavy";
         }
       }
       .jing-gao {
