@@ -1,5 +1,5 @@
 .store_bg {
-  height: 1533px;
+  height: 1850px;
   background-image: url(../assets/img/store_3.png);
   background-size: 100% auto;
   position: relative;
@@ -38,20 +38,29 @@
     }
   }
 
+  .store_4 {
+    position: absolute;
+    height: 1900px;
+    img{
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
   .store_1 {
     width: 628px;
     height: 533px;
     object-fit: fill;
     position: absolute;
     top: 95px;
-    right: 67px;
+    right: 150px;
   }
   .store_2{
-    width: 1233px;
-    height: 668px;
+    width: calc(100vw - 300px);
+    // height: 668px;
     object-fit: fill;
     position: absolute;
-    top: 699px;
+    top: 750px;
     right: 50%;
     transform: translateX(50%);
   }
