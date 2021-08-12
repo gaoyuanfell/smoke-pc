@@ -29,10 +29,10 @@ const home = new Vue({
       this.setIntervalTransformation();
     },
     setIntervalTransformation() {
-      // this.setIntervalNum && clearInterval(this.setIntervalNum);
-      // this.setIntervalNum = setInterval(() => {
-      //   this.transformation(1);
-      // }, 5000);
+      this.setIntervalNum && clearInterval(this.setIntervalNum);
+      this.setIntervalNum = setInterval(() => {
+        this.transformation(1);
+      }, 5000);
     }
   },
   ready() {
