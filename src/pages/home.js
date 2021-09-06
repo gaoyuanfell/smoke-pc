@@ -19,23 +19,26 @@ const home = new Vue({
           break;
       }
       if (this.number < 0) this.number = 2;
-      if (this.number >= 3) this.number = 0;
+      if (this.number >= 4) this.number = 0;
       this.translateX = -100 * this.number;
-      this.setIntervalTransformation();
+      // this.setIntervalTransformation();
     },
     setTransformation(num) {
       this.number = num;
       this.translateX = -100 * this.number;
-      this.setIntervalTransformation();
+      // this.setIntervalTransformation();
     },
     setIntervalTransformation() {
       this.setIntervalNum && clearInterval(this.setIntervalNum);
       this.setIntervalNum = setInterval(() => {
         this.transformation(1);
       }, 5000);
+    },
+    select(index) {
+      window.$index = index
     }
   },
   ready() {
-    this.setIntervalTransformation();
+    // this.setIntervalTransformation();
   }
 });

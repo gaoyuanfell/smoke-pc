@@ -52,6 +52,12 @@
                 <p>乐享每一“氪”！</p>
               </div>
             </div>
+            <div class="swiper-item">
+              <div class="info">
+                <p>FLOCO乐氪 S5换弹式雾化器</p>
+                <p>乐享每一“氪”！</p>
+              </div>
+            </div>
           </div>
 
           <div class="arrow left" v-on:click="transformation(-1)"></div>
@@ -60,6 +66,7 @@
             <span class="origin-item" v-on:click="setTransformation(0)" v-bind:class="{ active: number === 0 }"></span>
             <span class="origin-item" v-on:click="setTransformation(1)" v-bind:class="{ active: number === 1 }"></span>
             <span class="origin-item" v-on:click="setTransformation(2)" v-bind:class="{ active: number === 2 }"></span>
+            <span class="origin-item" v-on:click="setTransformation(2)" v-bind:class="{ active: number === 3 }"></span>
           </div>
           <div class="jing-gao flex-center">
             <i class="icon-jing-gao"></i>
@@ -79,7 +86,7 @@
               <p>
                 两年前，银橙科技进入电子烟行业并建立了电子烟品牌FLOCO乐氪，经过一年多的筹备，多次检测调试，终于为广大消费者打造出了S1、S5、S10<span
                   class="blob"
-                  >三大系列</span
+                  >四大系列</span
                 >的替烟产品。
               </p>
               <p>
@@ -99,27 +106,34 @@
             <p>ABOUT PRODUCT<span class="letter-spacing-0">S</span></p>
           </div>
           <div class="product-list flex-center">
-            <div class="product-list-item">
+            <a href="#product" class="product-list-item" v-on:click="select(1)">
               <img src="src/assets/img/home_product_2.png" />
               <div class="item-info flex-center">
                 <p>FLOCO</p>
                 <p>S1换弹式雾化器</p>
               </div>
-            </div>
-            <div class="product-list-item">
+            </a>
+            <a href="#product" class="product-list-item" v-on:click="select(2)">
               <img src="src/assets/img/home_product_3.png" />
               <div class="item-info flex-center">
                 <p>FLOCO</p>
                 <p>S5换弹式雾化器</p>
               </div>
-            </div>
-            <div class="product-list-item">
+            </a>
+            <a href="#product" class="product-list-item" v-on:click="select(3)">
+              <img src="src/assets/img/home_product_5.png" />
+              <div class="item-info flex-center">
+                <p>FLOCO</p>
+                <p>S8一次性雾化棒</p>
+              </div>
+            </a>
+            <a href="#product" class="product-list-item" v-on:click="select(4)">
               <img src="src/assets/img/home_product_4.png" />
               <div class="item-info flex-center">
                 <p>FLOCO</p>
                 <p>S10一次性雾化棒</p>
               </div>
-            </div>
+            </a>
           </div>
         </section>
         <section class="home_patent flex-center">
@@ -133,10 +147,10 @@
               <li>烟油获得ROHS认证以及FDA认证</li>
             </ul>
             <ul>
-              <li>获欧盟电子雾化器CE专业检测认证</li>
-              <li>获美国联邦通信委员会FCC专业检测认证</li>
-              <li>整机符合TCT检测</li>
-              <li>烟油获得ROHS认证以及FDA认证</li>
+              <li>十余项电子烟专利技术及知识产权</li>
+              <li>几十件相关著作权申请</li>
+              <li>上百项国内及国际检测认证</li>
+              <li>累计上千万的研发投入</li>
             </ul>
           </div>
 
@@ -237,6 +251,37 @@
               <p class="jing-gao-info">未成年人禁止使用</p>
             </div>
             <img src="./src/assets/img/product_2.png" />
+          </div>
+          <div class="product-list-item">
+            <div class="item-info">
+              <h6>500<sup>+</sup> 口</h6>
+              <h1>S10一次性雾化棒</h1>
+              <div class="item-info-box flex-center">
+                <div class="item-info-icon flex-center">
+                  <img src="./src/assets/svg/s8_1.svg" />
+                </div>
+                <div class="item-info-icon flex-center">
+                  <img src="./src/assets/svg/s8_2.svg" />
+                </div>
+                <div class="item-info-icon flex-center">
+                  <img src="./src/assets/svg/s8_3.svg" />
+                </div>
+                <div class="item-info-icon flex-center">
+                  <img src="./src/assets/svg/s8_4.svg" />
+                </div>
+                <div class="item-info-icon flex-center">
+                  <img src="./src/assets/svg/s8_5.svg" />
+                </div>
+                <div class="item-info-icon flex-center">
+                  <img src="./src/assets/svg/s8_6.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="jing-gao flex-center">
+              <i class="icon-jing-gao"></i>
+              <p class="jing-gao-info black">未成年人禁止使用</p>
+            </div>
+            <img src="./src/assets/img/product_4.png" />
           </div>
           <div class="product-list-item">
             <div class="item-info">

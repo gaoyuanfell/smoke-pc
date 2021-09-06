@@ -5,7 +5,7 @@
   // height: 640px;
   height: calc(100vh - 80px);
   .swiper-box {
-    width: 300vw;
+    width: 400vw;
     display: flex;
     overflow: hidden;
     // transform: translateX(-200vw);
@@ -67,6 +67,27 @@
     }
   }
   .swiper-item:nth-child(3) {
+    background-image: url(../assets/img/home_swiper_4.jpg);
+    .info {
+      text-align: center;
+      margin-top: 45px;
+      margin-right: 500px;
+      p:nth-child(1) {
+        color: #fff;
+        font-size: 23px;
+        font-weight: bold;
+      }
+      p:nth-child(2) {
+        color: #fff;
+        font-size: 64px;
+        font-weight: bold;
+        margin-top: 36px;
+        margin-right: -42px;
+        font-family: "Source Han Sans CN - Heavy";
+      }
+    }
+  }
+  .swiper-item:nth-child(4) {
     background-image: url(../assets/img/home_swiper_3.png);
     .info {
       text-align: center;
@@ -273,6 +294,7 @@
     height: 372px;
     margin: 0 13px;
     position: relative;
+    cursor: pointer;
     img {
       width: 100%;
       object-fit: cover;

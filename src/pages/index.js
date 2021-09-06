@@ -69,6 +69,9 @@ function hashchange(hash = "home") {
     ref.style.display = "";
     animate(ref);
   }
+  if (hash === "product") {
+    window.product.select();
+  }
 }
 
 window.addEventListener("hashchange", () => {
@@ -76,7 +79,7 @@ window.addEventListener("hashchange", () => {
 });
 
 window.onload = () => {
-  const _router = router.filter(r => !r.loaded)
+  const _router = router.filter((r) => !r.loaded);
   for (let index = 0; index < _router.length; index++) {
     const route = _router[index];
     const ref = document.querySelector(`[route-id="${route.component}"]`);
@@ -89,7 +92,7 @@ window.onload = () => {
       _ref.style.display = "none";
     }
   }
-}
+};
 
 import "./home";
 import "./product";
